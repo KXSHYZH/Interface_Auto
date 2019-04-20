@@ -1,0 +1,28 @@
+2019-04-19 19:54:15,238 - INFO - 当前调用方法 common.Request.request
+2019-04-19 19:54:15,238 - INFO - 'url'参数信息：https://www.imooc.com/lecturer/ajaxrecteacher
+2019-04-19 19:54:15,238 - INFO - 'params'参数信息：None
+2019-04-19 19:54:15,238 - INFO - 'method'参数信息：GET
+2019-04-19 19:54:15,629 - INFO - 当前调用方法 common.Request.request
+2019-04-19 19:54:15,629 - INFO - 'url'参数信息：https://www.imooc.com/search/hotwords
+2019-04-19 19:54:15,629 - INFO - 'params'参数信息：None
+2019-04-19 19:54:15,629 - INFO - 'method'参数信息：POST
+2019-04-19 19:58:02,956 - INFO - 当前调用方法 common.Assert.assert_true
+2019-04-19 19:58:02,956 - INFO - '请求返回数据'参数信息：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+2019-04-19 19:58:02,956 - INFO - '预期'参数信息：parameter
+2019-04-19 19:58:02,956 - ERROR - "传入的数据有误，错误原因'str' object has no attribute 'keys'
+                       请求数据为：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+                       预期数据为：parameter
+2019-04-19 19:59:35,389 - INFO - 当前调用方法 common.Assert.assert_true
+2019-04-19 19:59:35,389 - INFO - '请求返回数据'参数信息：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+2019-04-19 19:59:35,389 - INFO - '预期'参数信息：parameter
+2019-04-19 19:59:35,389 - ERROR - "传入的数据有误，错误原因'str' object has no attribute 'keys'
+                       请求数据为：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+                       预期数据为：parameter
+2019-04-19 20:01:18,890 - INFO - 当前调用方法 common.Assert.assert_true
+2019-04-19 20:01:18,890 - INFO - '请求返回数据'参数信息：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+2019-04-19 20:01:18,890 - INFO - '预期'参数信息：parameter
+2019-04-19 20:01:18,890 - ERROR - "传入的数据有误，错误原因'str' object has no attribute 'keys'
+                       请求数据为：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+                       预期数据为：parameter
+2019-04-19 20:51:46,196 - ERROR - 打开D:\script_auto\Interface_Auto\CaseData\case.xls失败，
+                         错误原因[Errno 2] No such file or directory: 'D:\\script_auto\\Interface_Auto\\CaseData\\case.xls'

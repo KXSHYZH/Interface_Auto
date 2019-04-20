@@ -1,0 +1,145 @@
+# ---====******************************************************====--- #
+# ---====*-**********************-注意-**********************-*====--- #
+# ---====================*必须要配置基础路径*======================--- #
+# ---====*如果设置了将结果写入EXECL，在执行前一定要将EXECL关闭*====--- #
+# ---====*只能使用‘xls’的EXECL文件*==============================--- #
+# ---====******************************************************====--- #
+# ---====*重要：执行请将数据进行空行删除操作，不是Delete*******====--- #
+# ---====*具体方式请查看READ.md********************************====--- #
+# -=*https://jingyan.baidu.com/article/b907e6276b6c6d46e6891c49.html=- #
+
+CASE_CONF:
+    FILE_NAME: 'case.xls'
+    SHEET_1:  # 测试用例Sheet页
+        SHEET_NAME: 'test_api'
+        SHEET_INDEX: 0
+    RULE_DICT:  # 设置用例的过滤规则，符合下列条件的用例将不会执行，可以设置多条
+        RUN: 'N'
+    CASE_FIELD:  # -*-注意-*- 用例的表头必须是下列字段
+        CASE_ID: # 测试用例的编号
+            INDEX: 0
+            NAME: 'case_id'
+            FORMAT:  # IS_NONE是否可以为空，VALUE字段取值范围，TYPE字段类型，RE正则匹配（三种条件满足其一即可）
+                IS_NONE: 'N'
+                VALUE: 'no_check'
+                TYPE: 'no_check'
+                RE: 'no_check'
+        MODULE:  # 测试的模块
+            INDEX: 1
+            NAME: 'module'
+            FORMAT:
+                IS_NONE: 'Y'
+                VALUE: 'no_check'
+                TYPE: 'no_check'
+                RE: 'no_check'
+        DESCRIBE:  # 测试点描述
+            INDEX: 2
+            NAME: 'describe'
+            FORMAT:
+                IS_NONE: 'Y'
+                VALUE: 'no_check'
+                TYPE: 'no_check'
+                RE: 'no_check'
+        BASIC_URL:  # 基础URL
+            INDEX: 3
+            NAME: 'basic_url'
+            URL_1:  'https://api.douban.com'
+            URL_2:  'https://www.imooc.com'
+            FORMAT:
+                IS_NONE: 'N'
+                VALUE: ['URL_1', 'URL_2']  #  添加了基础路径URL后，需要在字典中进行添加
+                TYPE: 'no_check'
+                RE: 'no_check'
+        PATH:  # 基础URL后的路径
+            INDEX: 4
+            IS_NONE: 'Y'
+            NAME: 'path'
+            BASIC_PATH:
+                PANTH_1:
+            FORMAT:
+                IS_NONE: 'Y'
+                VALUE: 'no_check'
+                TYPE: 'no_check'
+                RE: '/\w.*'
+        RUN:  # 测试用例是否运行
+            INDEX: 5
+            NAME: 'run'
+            FORMAT:
+                IS_NONE: 'N'
+                VALUE: ['Y', 'N']
+                TYPE: 'no_check'
+                RE: 'no_check'
+        METHOD:  # 请求的方式
+            INDEX: 6
+            NAME: 'method'
+            FORMAT:
+                IS_NONE: 'N'
+                VALUE: ['GET', 'POST', 'PUT', 'DELETE']
+                TYPE: 'no_check'
+                RE: 'no_check'
+        HEADERS:  # 请求的头信息
+            INDEX: 7
+            NAME: 'headers'
+            FORMAT:
+                IS_NONE: 'Y'
+                VALUE: 'no_check'
+                TYPE: '(dict,)'
+                RE: 'no_check'
+        PARAMETER:  # 请求的参数
+            INDEX: 8
+            NAME: 'parameter'
+            FORMAT:
+                IS_NONE: 'Y'
+                VALUE: 'no_check'
+                TYPE: '(dict,)'
+                RE: '[?].*'
+        CORRELATION:  # 关联
+            INDEX: 9
+            NAME: 'correlation'
+            FORMAT:
+                IS_NONE: 'Y'
+                VALUE: 'no_check'
+                TYPE: '(dict,)'
+                RE: 'no_check'
+        EXPECTED:  # 预期
+            INDEX: 10
+            NAME: 'expected'
+            FORMAT:
+                IS_NONE: 'N'
+                VALUE: 'no_check'
+                TYPE: '(dict,)'
+                RE: 'no_check'
+        RESULT:  # 执行结果
+            INDEX: 11
+            NAME: 'result'
+            IS_WRITE: True
+        RESPONSE:  # -*-注意-*- 写入EXECL的相应数据不是完整的返回数据，是根据预期提取的对应值，以方便进行对比
+            INDEX: 12
+            NAME: 'response'
+            IS_WRITE: True
+
+EMAIL_CONF:
+      # 邮件服务器
+      SMTP_SERVER: 'smtp.163.com'
+      # 发送邮箱用户名
+      USER: 'yangzhou0612@163.com'
+      # 发送密码（163是使用授权码）
+      PASSWORD: 'shouquanma2019'
+      # 发送邮箱
+      SENDER: 'yangzhou0612@163.com'
+      # 接收邮箱，多个邮箱用逗号隔开
+      RECEIVES: ['652059886@qq.com']
+      # 发送邮件主题
+      SUBJECT: '自动化测试报告'
+      # 邮件正文内容
+      CONTENT: '''
+          报告名称: %s</br>
+          用例总数: %s</br>
+          用例通过: %s</br>
+          用例失败: %s</br>
+          开始时间: %s</br>
+          结束时间: %s</br>
+          运行时间: %s</br>
+          </br>详细信息清查看附件！'''
+
+

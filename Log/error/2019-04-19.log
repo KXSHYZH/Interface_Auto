@@ -1,0 +1,11 @@
+2019-04-19 19:58:02,956 - ERROR - assertion.py[:26] - "传入的数据有误，错误原因'str' object has no attribute 'keys'
+                       请求数据为：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+                       预期数据为：parameter
+2019-04-19 19:59:35,389 - ERROR - assertion.py[:26] - "传入的数据有误，错误原因'str' object has no attribute 'keys'
+                       请求数据为：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+                       预期数据为：parameter
+2019-04-19 20:01:18,890 - ERROR - assertion.py[:26] - "传入的数据有误，错误原因'str' object has no attribute 'keys'
+                       请求数据为：{'result': 0, 'data': ['React', {'parameter': None}, '算法', 'Vue.js', 'Python', '人工智能', 'GO语言', '小程序'], 'msg': '成功', 'case': {'run': {'parameter': None}, 'result': 1}}
+                       预期数据为：parameter
+2019-04-19 20:51:46,196 - ERROR - operationExcel.py[:27] - 打开D:\script_auto\Interface_Auto\CaseData\case.xls失败，
+                         错误原因[Errno 2] No such file or directory: 'D:\\script_auto\\Interface_Auto\\CaseData\\case.xls'
