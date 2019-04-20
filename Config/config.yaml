@@ -122,13 +122,13 @@ EMAIL_CONF:
       # 邮件服务器
       SMTP_SERVER: 'smtp.163.com'
       # 发送邮箱用户名
-      USER: 'yangzhou0612@163.com'
+      USER: 'xxxxx@163.com'
       # 发送密码（163是使用授权码）
-      PASSWORD: 'shouquanma2019'
+      PASSWORD: 'xxxxxx'
       # 发送邮箱
       SENDER: 'yangzhou0612@163.com'
       # 接收邮箱，多个邮箱用逗号隔开
-      RECEIVES: ['652059886@qq.com']
+      RECEIVES: ['xxxxx@qq.com']
       # 发送邮件主题
       SUBJECT: '自动化测试报告'
       # 邮件正文内容
