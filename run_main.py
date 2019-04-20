@@ -12,6 +12,6 @@ result = BeautifulReport(test_suite)
 result.report(filename='report_' + time_str + '.html', description='测试报告', report_path=path + r'\Report')
 # 发送邮件
 send_email = SendEmail(description=u'测试报告', pass_num=result.FIELDS['testAll'] - result.FIELDS['testFail'],
-                       fail_num=result.FIELDS['testAll'], start_time=result.FIELDS['beginTime'],
+                       fail_num=result.FIELDS['testFail'], start_time=result.FIELDS['beginTime'],
                        end_time=result.FIELDS['end_time'], continue_time=result.FIELDS['totalTime'])
 send_email.send_email()
