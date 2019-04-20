@@ -1,22 +1,22 @@
-1、使用方式
-
-import unittest
-from common.BeautifulReport import BeautifulReport
-
-if __name__ == '__main__':
-    test_suite = unittest.defaultTestLoader.discover('../tests', pattern='test*.py')
-    result = BeautifulReport(test_suite)
-    result.report(filename='测试报告', description='测试报告', report_path='report')
-    
-2、Report API简介
-
-- BeautifulReport.report
-  - report (
-    filename -> 测试报告名称, 如果不指定默认文件名为report.html
-    description -> 测试报告用例名称展示
-    report_path='.' -> log文件写入路径
-    )
-
+1、使用方式<br>
+<br>
+import unittest<br>
+from common.BeautifulReport import BeautifulReport<br>
+<br>
+if __name__ == '__main__':<br>
+    test_suite = unittest.defaultTestLoader.discover('../tests', pattern='test*.py')<br>
+    result = BeautifulReport(test_suite)<br>
+    result.report(filename='测试报告', description='测试报告', report_path='report')<br>
+    <br>
+2、Report API简介<br>
+<br>
+- BeautifulReport.report<br>
+  - report (<br>
+    filename -> 测试报告名称, 如果不指定默认文件名为report.html<br>
+    description -> 测试报告用例名称展示<br>
+    report_path='.' -> log文件写入路径<br>
+    )<br>
+<br>
 <br><br><br>
 
 <h4>Excel怎么批量删除空白行_Excel快速删除空行？<h4>
